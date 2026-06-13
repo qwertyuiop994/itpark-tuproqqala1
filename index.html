@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuproqqal'a IT Park | Kelajak shu yerdan boshlanadi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-icon"><i class="fas fa-laptop-code"></i></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+        <div class="logo">
+            <span class="icon"><i class="fas fa-laptop-code"></i></span>
+            Tuproqqal'a <span>IT Park</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Asosiy</a></li>
+            <li><a href="#about">Biz haqimizda</a></li>
+            <li><a href="#courses">Kurslar</a></li>
+            <li><a href="#mentors">Mentorlar</a></li>
+            <li><a href="#gallery">Galereya</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Bog'lanish</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn primary-btn btn-small" id="registerBtn">Ro'yxatdan o'tish</button>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Modal Form -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Kurslarga ro'yxatdan o'tish</h2>
+            <form id="modalForm">
+                <input type="text" placeholder="To'liq ismingiz" required>
+                <input type="tel" placeholder="Telefon raqamingiz" required>
+                <select required>
+                    <option value="">Kursni tanlang</option>
+                    <option value="web">Web Dasturlash</option>
+                    <option value="mobile">Mobil Dasturlash</option>
+                    <option value="ai">Sun'iy Intellekt</option>
+                    <option value="design">Grafik Dizayn</option>
+                    <option value="english">IT English</option>
+                </select>
+                <button type="submit" class="btn primary-btn w-100">Yuborish</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certModal">
+        <div class="modal-content cert-modal-content">
+            <span class="close-modal" id="closeCert">&times;</span>
+            <img id="certImage" src="" alt="Mentor Certificate">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+            <div class="badge">🔥 Yangi qabul boshlandi!</div>
+            <h1 class="hero-title">Kelajak texnologiyalariga <br><span class="text-gradient typing-text"></span></h1>
+            <p class="hero-subtitle">Tuproqqal'a IT Park — yosh dasturchilar, startaplar va innovatsion g'oyalar markazi. Biz bilan zamonaviy kasblarni egallang va o'z kelajagingizni quring.</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn primary-btn">Kurslarni ko'rish</a>
+                <a href="#about" class="btn secondary-btn"><i class="fas fa-play-circle"></i> Video tanishuv</a>
+            </div>
+            <div class="hero-stats-mini">
+                <div class="stat-mini"><strong>500+</strong> Bitiruvchilar</div>
+                <div class="stat-mini"><strong>15+</strong> Mentorlar</div>
+                <div class="stat-mini"><strong>10+</strong> Startaplar</div>
+            </div>
+        </div>
+        <div class="hero-graphics" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="main-graphic">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IT Park Students" class="hero-img">
+            </div>
+            <div class="glass-card floating-card">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h4>Web Dasturlash</h4>
+                    <p>6 oylik kurs</p>
+                </div>
+            </div>
+             <div class="glass-card floating-card delay">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4>Sun'iy Intellekt</h4>
+                    <p>Kelajak kasbi</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-user-graduate"></i>
+            <h3 class="counter" data-target="500">0</h3>
+            <p>Muvaffaqiyatli bitiruvchilar</p>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-laptop-code"></i>
+            <h3 class="counter" data-target="24">0</h3>
+            <p>Zamonaviy o'quv xonalari</p>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3 class="counter" data-target="15">0</h3>
+            <p>Tajribali mentorlar</p>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fas fa-briefcase"></i>
+            <h3 class="counter" data-target="85">0</h3>
+            <p>Ish bilan ta'minlanganlar (%)</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-image-wrapper" data-aos="fade-right">
+                <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
+                    <h2>3+</h2>
+                    <p>Yillik tajriba</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IT Park Office" class="about-img">
+            </div>
+            <div class="about-content-right" data-aos="fade-left">
+                <h4 class="section-subtitle">Biz Haqimizda</h4>
+                <h2 class="section-title">Tuproqqal'a IT Park – <span class="text-gradient">Innovatsiyalar Makoni</span></h2>
+                <p class="about-desc">Biz Xorazm viloyati Tuproqqal'a tumanida axborot texnologiyalarini rivojlantirish, yoshlarni zamonaviy kasblarga o'rgatish va IT loyihalarni qo'llab-quvvatlash uchun tashkil etilgan markazmiz. Har bir o'quvchi bu yerda nafaqat bilim, balki kuchli jamoa va kelajak uchun imkoniyat topadi.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                        <div>
+                            <h4>Startap inkubator</h4>
+                            <p>G'oyalaringizni biznesga aylantirishga yordam beramiz va investorlar topishga ko'maklashamiz.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                        <div>
+                            <h4>Coworking zonasi</h4>
+                            <p>Erkin ishlash, frilanserlik faoliyati va networking uchun barcha sharoitlar mavjud.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h4>Bandlikka ko'maklashish</h4>
+                            <p>Eng yaxshi bitiruvchilarni mahalliy va xorijiy kompaniyalarga ishga joylashishiga yordam beramiz.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn primary-btn mt-2" data-aos="fade-up" data-aos-delay="400">Batafsil ma'lumot <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses / Services -->
+    <section id="courses" class="courses">
+        <div class="section-header" data-aos="fade-up">
+            <h4 class="section-subtitle">O'quv Dasturlari</h4>
+            <h2 class="section-title">Bizning <span class="text-gradient">Kurslarimiz</span></h2>
+            <p class="section-desc">O'zingizga mos yo'nalishni tanlang va sohaning yetuk mutaxassisi bo'ling. Darslar amaliyotga asoslangan holda olib boriladi.</p>
+        </div>
+        <div class="cards-container">
+            <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <span class="badge course-badge">6 oy</span>
+                </div>
+                <div class="course-content">
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-user"></i> 120+ o'quvchi</span>
+                    </div>
+                    <h3>Web Dasturlash (Full-Stack)</h3>
+                    <p>HTML, CSS, JavaScript, React, Node.js va PostgreSQL yordamida noldan mukammal veb-saytlar va tizimlar yaratish.</p>
+                    <a href="#" class="course-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <span class="badge course-badge">5 oy</span>
+                </div>
+                <div class="course-content">
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-user"></i> 85+ o'quvchi</span>
+                    </div>
+                    <h3>Mobil Dasturlash (Flutter)</h3>
+                    <p>Flutter va Dart yordamida bitta kod bazasidan Android va iOS uchun tez va zamonaviy ilovalar ishlab chiqish.</p>
+                    <a href="#" class="course-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <span class="badge course-badge">8 oy</span>
+                </div>
+                <div class="course-content">
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 5.0</span>
+                        <span><i class="fas fa-user"></i> 40+ o'quvchi</span>
+                    </div>
+                    <h3>Sun'iy Intellekt va Python</h3>
+                    <p>Python dasturlash tili, ma'lumotlar bazasi, Data Science va Machine Learning algoritmlari bilan ishlash.</p>
+                    <a href="#" class="course-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <span class="badge course-badge">4 oy</span>
+                </div>
+                <div class="course-content">
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                        <span><i class="fas fa-user"></i> 150+ o'quvchi</span>
+                    </div>
+                    <h3>Grafik Dizayn</h3>
+                    <p>Adobe Photoshop, Illustrator, CorelDraw va Figma dasturlarida UI/UX va SMM uchun zamonaviy dizaynlar yaratish.</p>
+                    <a href="#" class="course-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <span class="badge course-badge">7 oy</span>
+                </div>
+                <div class="course-content">
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-user"></i> 60+ o'quvchi</span>
+                    </div>
+                    <h3>3D O'yin Yaratish</h3>
+                    <p>C# va Unity engine yordamida zamonaviy 2D va 3D kompyuter hamda mobil o'yinlarini ishlab chiqish.</p>
+                    <a href="#" class="course-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1546410531-ee4cb1270cb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <span class="badge course-badge">3 oy</span>
+                </div>
+                <div class="course-content">
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-user"></i> 200+ o'quvchi</span>
+                    </div>
+                    <h3>Kompyuter Savodxonligi</h3>
+                    <p>Kompyuter bilan ishlash, MS Office dasturlari va internetda xavfsiz va samarali ishlash ko'nikmalari.</p>
+                    <a href="#" class="course-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section id="mentors" class="mentors">
+        <div class="section-header" data-aos="fade-up">
+            <h4 class="section-subtitle">Bizning Jamoa</h4>
+            <h2 class="section-title">Tajribali <span class="text-gradient">Mentorlar</span></h2>
+            <p class="section-desc">Sizga o'z sohasining yetuk mutaxassislari dars beradi.</p>
+        </div>
+        <div class="mentors-grid">
+            <div class="mentor-card" data-aos="flip-left" data-aos-delay="100">
+                <img id="hikmat-img" src="images/hikmat.png" alt="Xamdamov Hikmat">
+
+                <div class="mentor-info">
+                    <h4>Ruzimbayev Hikmat Xamdamovich</h4>
+                    <p>Senior Full-Stack Developer</p>
+                    <button class="cert-btn" onclick="openCert('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"><i class="fas fa-certificate"></i> Sertifikat</button>
+                    <div class="mentor-socials mt-2">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mentor-card" data-aos="flip-left" data-aos-delay="200">
+                <img src="images/malika.jpg" alt="Malika Rustamova">
+                <div class="mentor-info">
+                    <h4>Malika Rustamova</h4>
+                    <p>UI/UX & Grafik Dizayner</p>
+                    <button class="cert-btn" onclick="openCert('images/malika.jpg')"><i class="fas fa-certificate"></i> Sertifikat</button>
+                    <div class="mentor-socials mt-2">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mentor-card" data-aos="flip-left" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mentor 3">
+                <div class="mentor-info">
+                    <h4>Azizbek Oripov</h4>
+                    <p>AI & Python Dasturchi</p>
+                    <button class="cert-btn" onclick="openCert('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"><i class="fas fa-certificate"></i> Sertifikat</button>
+                    <div class="mentor-socials mt-2">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mentor-card" data-aos="flip-left" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mentor 4">
+                <div class="mentor-info">
+                    <h4>Dildora Aliyeva</h4>
+                    <p>Flutter Developer</p>
+                    <button class="cert-btn" onclick="openCert('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"><i class="fas fa-certificate"></i> Sertifikat</button>
+                    <div class="mentor-socials mt-2">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (IT Park Interior) -->
+    <section id="gallery" class="gallery">
+        <div class="section-header" data-aos="fade-up">
+            <h4 class="section-subtitle">Galereya</h4>
+            <h2 class="section-title">IT Park <span class="text-gradient">Ichki Ko'rinishi</span></h2>
+            <p class="section-desc">Zamonaviy kompyuter xonalari, kovorking markazi va erkin ishlash zonalari bilan tanishing.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/gallery1.jpg" alt="IT Park - Dasturlash xonasi">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/gallery2.png" alt="IT Park - Kompyuter xonasi">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <img src="images/gallery3.jpg" alt="IT Park - 3D dizayn xonasi">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                <img src="images/gallery4.png" alt="IT Park - Dars jarayoni">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                <img src="images/gallery5.jpg" alt="IT Park - O'quvchilar">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                <img src="images/gallery6.png" alt="IT Park - Kompyuterlar">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header" data-aos="fade-up">
+            <h4 class="section-subtitle">Fikrlar</h4>
+            <h2 class="section-title">O'quvchilarimiz <span class="text-gradient">Nima Deydi?</span></h2>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="100">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Tuproqqal'a IT Parkida 6 oylik web dasturlash kursini o'qidim. Hozirda poytaxtdagi yirik IT kompaniyada masofadan (remote) ishlayapman. Ustozlarga katta rahmat!</p>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <div>
+                        <h4>Javohir Quryozov</h4>
+                        <p>Front-end dasturchi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="200">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Dizayn sohasiga juda qiziqardim, lekin qayerdan boshlashni bilmasdim. Shu yerdagi kurs orqali UI/UX sirlarini o'rgandim va hozir o'z shaxsiy mijozlarim bor.</p>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    <div>
+                        <h4>Shaxnoza Karimova</h4>
+                        <p>Freelance Designer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Sun'iy intellekt kursiga yozildim. Darslar amaliyotga asoslanganligi juda yoqdi. O'zimning birinchi AI telegram botimni yaratdim. Barchaga tavsiya qilaman.</p>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                    <div>
+                        <h4>Umidjon Sotvoldiyev</h4>
+                        <p>Talaba</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="faq-container" data-aos="fade-up">
+            <div class="faq-header">
+                <h4 class="section-subtitle">Savol va Javoblar</h4>
+                <h2 class="section-title">Ko'p Beriladigan <span class="text-gradient">Savollar</span></h2>
+                <p>Kurslarimiz va markazimiz haqida o'zingizni qiziqtirgan barcha savollarga javob toping.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Dasturlashni o'rganish uchun noutbuk kerakmi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yo'q, dastlabki vaqtlarda shart emas. Bizning IT Park zamonaviy kompyuterlar bilan jihozlangan. Dars vaqtida va darsdan so'ng amaliyot qilish uchun markazimiz kompyuterlaridan foydalanishingiz mumkin. Ammo kelajakda masofadan ishlash uchun o'zingizga xarid qilishingizni maslahat beramiz.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Kurslarni bitirgach sertifikat beriladimi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ha, kursni muvaffaqiyatli tamomlagan va barcha amaliy loyihalarni himoya qilgan o'quvchilarga maxsus QR kodli davlat namunasidagi sertifikat taqdim etiladi.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Ingliz tilini bilish majburiymi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Boshlang'ich darajada dasturlashni o'rganish uchun ingliz tili qattiq talab qilinmaydi, darslar o'zbek tilida o'tiladi. Ammo IT sohasida kuchli mutaxassis bo'lish va ko'p daromad topish uchun kelajakda ingliz tilini o'rganish juda muhim. Shuning uchun bizda "IT English" kurslari ham mavjud.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Yosh chegarasi bormi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Asosan 12 yoshdan yuqori bo'lgan barchani qabul qilamiz. Dasturlashni o'rganish uchun yoshning chegarasi yo'q, asosiysi xohish va kompyuterga qiziqish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact">
+        <div class="section-header" data-aos="fade-up">
+            <h4 class="section-subtitle">Aloqa</h4>
+            <h2 class="section-title">Biz bilan <span class="text-gradient">Bog'lanish</span></h2>
+            <p>Savollaringiz bormi yoki kursga yozilmoqchimisiz? Bizga yozing.</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info-panel" data-aos="fade-right">
+                <h3>Aloqa Ma'lumotlari</h3>
+                <p>Quyidagi raqamlar orqali yoki ijtimoiy tarmoqlardagi sahifalarimizdan biz bilan bog'lanishingiz mumkin.</p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Manzil:</h4>
+                            <p>Xorazm viloyati, Tuproqqal'a tumani, Yoshlar markazi binosi, 2-qavat.</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Telefon:</h4>
+                            <p>+998 90 123 45 67<br>+998 99 765 43 21</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email:</h4>
+                            <p>info@tuproqqalait.uz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-panel" data-aos="fade-left">
+                <form class="contact-form" id="mainContactForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Ismingiz</label>
+                            <input type="text" placeholder="Ismingizni kiriting" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Telefon raqam</label>
+                            <input type="tel" placeholder="+998 90 123 45 67" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Xabar mavzusi</label>
+                        <input type="text" placeholder="Nima haqida murojaat qilyapsiz?" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Xabaringiz</label>
+                        <textarea placeholder="Xabaringizni batafsil yozing..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn w-100"><i class="fas fa-paper-plane"></i> Xabar yuborish</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="logo footer-logo">
+                    <span class="icon"><i class="fas fa-laptop-code"></i></span>
+                    Tuproqqal'a <span>IT Park</span>
+                </div>
+                <p>Tuproqqal'a yoshlarini raqamli kelajakka tayyorlovchi zamonaviy IT markaz. Dasturlash, dizayn va sun'iy intellekt.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="200">
+                <h3>Tezkor havolalar</h3>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-angle-right"></i> Asosiy</a></li>
+                    <li><a href="#about"><i class="fas fa-angle-right"></i> Biz haqimizda</a></li>
+                    <li><a href="#courses"><i class="fas fa-angle-right"></i> Kurslar</a></li>
+                    <li><a href="#mentors"><i class="fas fa-angle-right"></i> Mentorlar</a></li>
+                    <li><a href="#gallery"><i class="fas fa-angle-right"></i> Galereya</a></li>
+                    <li><a href="#faq"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>Kurslar</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Web Dasturlash</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Mobil Dasturlash</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Grafik Dizayn</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Sun'iy Intellekt</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> IT English</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-col" data-aos="fade-up" data-aos-delay="400">
+                <h3>Yangiliklarga obuna bo'lish</h3>
+                <p>IT sohasidagi so'nggi yangiliklar va chegirmalarni email orqali qabul qiling.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email manzilingiz" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tuproqqal'a IT Park. Barcha huquqlar himoyalangan.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Maxfiylik siyosati</a>
+                <a href="#">Foydalanish shartlari</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
